@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="style/poster.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id='main' class='main'>
+        
+        <div id='posterlist' class='posterlist'>
+            <div class="lineposter">
+                <div class="postercard">
+                    <img class="posterimg" src="images/headimg.jpg">
+                    <button class="edit" id="modaleditbtn">
+                        <img class="deleteimg" src="images/edit.svg">
+                    </button>
+                    <button class="delete" id="modaldeletebtn"><img class="deleteimg" src="images/delete.svg"></button>
+                </div>
+                
+                <div class="postercard">
+                    <img class="posterimg" src="images/3.jpg">
+                    <button class="edit" id="modaleditbtn">
+                        <img class="deleteimg" src="images/edit.svg">
+                    </button>
+                    <button class="delete" id="modaldeletebtn"><img class="deleteimg" src="images/delete.svg"></button>
+                </div>
+
+                <div class="postercard">
+                    <img class="posterimg" src="images/3.jpg">
+                    <button class="edit" id="modaleditbtn">
+                        <img class="deleteimg" src="images/edit.svg">
+                    </button>
+                    <button class="delete" id="modaldeletebtn"><img class="deleteimg" src="images/delete.svg"></button>
+                </div>
+
+                <div class="postercard">
+                    <img class="posterimg" src="images/3.jpg">
+                    <button class="edit" id="modaleditbtn">
+                        <img class="deleteimg" src="images/edit.svg">
+                    </button>
+                    <button class="delete" id="modaldeletebtn"><img class="deleteimg" src="images/delete.svg"></button>
+                </div>
+                <div class="postercard">
+                    <img class="posterimg" src="images/3.jpg">
+                    <button class="edit" id="modaleditbtn">
+                        <img class="deleteimg" src="images/edit.svg">
+                    </button>
+                    <button class="delete" id="modaldeletebtn"><img class="deleteimg" src="images/delete.svg"></button>
+                </div>
+                <div class="postercard">
+                    <img class="posterimg" src="images/3.jpg">
+                    <button class="edit" id="modaleditbtn">
+                        <img class="deleteimg" src="images/edit.svg">
+                    </button>
+                    <button class="delete" id="modaldeletebtn"><img class="deleteimg" src="images/delete.svg"></button>
+                </div>
+                
+            </div>
+
+            <button id='addposter' class='addposter' id="addposter">
+                Добавить постер   
+            </button>
+        </div>
+
+
+        
+        
+        
+        
+
+<!--  -->
+        <div id='rectangle386' class='rectangle386'>
+            <div class="leftmenu">Студии</div>
+            <div class="leftmenu">Афиша</div>
+            <div class="leftmenu">Новые студии</div>
+            <div class="leftmenu">Пользователи</div>
+            <div class="leftmenu">Новые мероприятия</div>
+            <div class="leftmenu">Мероприятия</div>
+            <!-- <div class="leftmenu">Добавить сотрудника</div> -->
+
+        </div>
+        <div id='frame1' class='frame1'>
+        <div id='insight' class='insight'>
+        Insight
+        </div>
+
+        <div class="profile">
+            
+            <img id='userphoto' class='userphoto'>
+            
+            <img id='arrow60' class='arrow60' src='images/Arrow60.svg'/>
+
+
+            <div class="dropdown">
+                <button class="dropbtn">  
+                    <img id='userphoto' class='userphoto'>
+                    <img id='arrow60' class='arrow60' src='images/Arrow60.svg'/>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Выйти из аккаунта</a>
+                </div>
+              </div>
+        </div>
+
+        </div>
+    </div>  
+    
+    <!-- для добавления -->
+    <div id="modal" class="modal">
+        <span class="close-button">&times;</span>
+        <div class="modal-content">
+            <label class="file-upload">
+                Выберите или перенесите файл для загрузки
+                <input type="file" class="modalcontentimage" accept="image/*">
+            </label>
+            <img id="image-preview" class="preview" alt="Предварительный просмотр">
+            <div class="modal_contentright">
+                <input type="url" class="modalcontenthref" placeholder="Ссылка на страницу"> 
+                <input type="submit" class="modalcontentbtn" value="Добавить постер">
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- для редактирования -->
+    <div id="modaledit" class="modaledit">
+        <span class="close-buttonedit">&times;</span>
+        <div class="modal-contentedit">
+            <label class="file-uploadedit">
+                Выберите или перенесите файл для загрузки
+                <input type="file" class="modalcontentimageedit" accept="image/*">
+            </label>
+            <img id="image-preview" class="previewedit" alt="Предварительный просмотр">
+            <div class="modal_contentright">
+                <input type="url" class="modalcontenthrefedit" placeholder="Ссылка на страницу"> 
+                <input type="submit" class="modalcontentbtnedit" value="Сохранить изменения">
+            </div>
+        </div>
+    </div>
+
+    <!-- для удаления -->
+    <div id="modaldelete" class="modaldelete">
+        
+        <div class="modal-contentdelete">
+            <p>Вы уверены, что хотите удалить этот постер?</p>
+            <button class="confirmDelete" id="confirmDelete">Да, удалить</button>
+            <button class="close-buttonedelete" id="closedelete">Не удалять</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    // добавление
+    document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById("modal");
+    const btn = document.getElementById("addposter");
+    
+    const closeButton = document.querySelector(".close-button");
+
+    // Открыть модальное окно при нажатии на кнопку
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // Закрыть модальное окно при нажатии на кнопку "закрыть"
+    closeButton.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Закрыть модальное окно при клике вне модального окна
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+
+// редактирование
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById("modaledit");
+    // const btn = document.getElementById("modaleditbtn");
+    const closeButton = document.querySelector(".close-buttonedit");
+
+    // Получаем все кнопки редактирования
+    const editButtons = document.querySelectorAll(".edit");
+
+    // Открыть модальное окно при нажатии на кнопку
+    editButtons.forEach(button => {
+        button.onclick = function() {
+            modal.style.display = "block";
+        };
+    });
+    // btn.onclick = function() {
+    //     modal.style.display = "block";
+    // }
+
+    // Закрыть модальное окно при нажатии на кнопку "закрыть"
+    closeButton.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Закрыть модальное окно при клике вне модального окна
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+
+// удаление
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById("modaldelete");
+    const closeBTN = document.getElementById("closedelete");
+
+
+    // Получаем все кнопки редактирования
+    const editButtons = document.querySelectorAll(".delete");
+
+    // Открыть модальное окно при нажатии на кнопку
+    editButtons.forEach(button => {
+        button.onclick = function() {
+            modal.style.display = "block";
+        };
+    });
+    closeBTN.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Закрыть модальное окно при клике вне модального окна
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+
+
+
+
+
+
+// тут дял картинки
+
+document.querySelector('.modalcontentimage').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById('image-preview');
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result; // Устанавливаем источник для изображения
+                preview.style.display = 'block'; // Показать изображение
+            }
+            reader.readAsDataURL(file); // Читаем файл как Data URL
+        } else {
+            preview.style.display = 'none'; // Скрыть изображение, если файл не выбран
+        }
+    });
+
+
+
+</script>
+</html>
+
+    
