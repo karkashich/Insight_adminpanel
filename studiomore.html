@@ -10,69 +10,302 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <div id='main' class='main'>
         <div id='rectangle352' class='rectangle352'>
             <div class="coluns">
+                <!-- данные партнера -->
                 <div class="leftcolun">
+
                     <div class="studioname">
                         ОАО ИнфоОблСервис
                     </div>
 
-                    <div class="studioadress">
-                        <div style="color: #999999; font-size: 16px;">Адресс:</div>
-                        <div class="infotxt">г.Архангельск, проезд Бухарестская, 77</div>
-                        <div style="color: #999999; font-size: 16px; margin-top:10px;">ФИО Руководителя:</div>
-                        <div class="infotxt">Иванов Иван Иванович</div>
-                        <div style="color: #999999; font-size: 16px; margin-top:10px; display:block;">Email:
+                    <div class="studiodata">
+                        <div style="color: #999999; font-size: 16px; display: block;">
+                            <label style="gap: 20px; color:#fff;">
+                                Самозанятый
+                            </label>
+                            <input type="radio" name="status" value="Самозанятый" onclick="toggleFieldsType()" >
+                            <label style="gap: 20px; color:#fff;">
+                                Юр лицо/ИП
+                            </label>
+                            <input type="radio" name="status" value="ЮР лицо/ИП" onclick="toggleFieldsType()" checked>
+                        </div>
+                    </div>
+
+                    <!-- тут по самозанятому -->
+                <div id="selfEmployedFields" style="display: none;">
+                    <div class="studiodatasam" style="display: block;">
+                        <div style="color: #999999; font-size: 16px; margin-top: 5px;">Наименование организации:</div>
+                        <div class="infotxt">ОАО ИнфоОблСервис</div>
+                        <div style="color: #999999; font-size: 16px; margin-top: 5px;">Наименование на английском:</div>
+                        <div class="infotxt">OAO InfoOblService</div>
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">Email: 
                             <a style="margin-left: 20px; color:#fff;">
                                 example@ya.ru
                             </a>
                         </div>
-                        
-                        
-                    </div>
-
-                    <div class="studiodata">
-                        <div style="color: #999999; font-size: 16px;">Наименование организации:</div>
-                        <div class="infotxt">ОАО ИнфоОблСервис</div>
-                        <div style="color: #999999; font-size: 16px; margin-top:10px;">ИНН:
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">Телефон: 
                             <a style="margin-left: 20px; color:#fff;">
-                                123456789
+                                89115582766
                             </a>
                         </div>
-                        
-                        <div style="color: #999999; font-size: 16px; margin-top:10px; display:block;">ОГРН/ОГРНИП * :
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">Фамилия: 
                             <a style="margin-left: 20px; color:#fff;">
-                                31686170013322
+                                Бугагагаг
                             </a>
                         </div>
-                        <div style="color: #999999; font-size: 16px;  margin-top:10px;">ЮР адресс</div>
-                        <div class="infotxt">г.Архангельск, проезд Бухарестская, 77</div>
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">Имя: 
+                            <a style="margin-left: 20px; color:#fff;">
+                                Бугагагагаг
+                            </a>
+                        </div>
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">Отчество: 
+                            <a style="margin-left: 20px; color:#fff;">
+                                Бугагагаг
+                            </a>
+                        </div>
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">ИНН: 
+                            <a style="margin-left: 20px; color:#fff;">
+                                Бугагагаг
+                            </a>
+                        </div>
                     </div>
+                    <div class="studiodatasam" style="display: block;">
+                        <div class="infotxt">
+                            Способ получения выплат
+                        </div>
+                        <div style="color: #999999; font-size: 16px; margin-top:10px; display:block;">
+                            <label style="gap: 20px; color:#fff;">
+                                По телефону
+                            </label>
+                            <input type="radio" id="phone" name="paymentMethod" value="phone" onclick="toggleFields()">
 
-                    <button class="apply" onclick="showWarningPanel()" >Предупреждение</button>
+                            <div id="phoneFields" class="hidden">
+                                <div style="color: #999999; font-size: 16px; margin-top:5px;">Телефон: 
+                                    <a style="margin-left: 20px; color:#fff;">
+                                        89115582766
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+                            <label style="gap: 20px; color:#fff;">
+                                На карту
+                            </label>
+                            <input type="radio" id="card" name="paymentMethod" value="card" onclick="toggleFields()" checked>
+
+                            <div id="cardFields" class="hidden">
+                                <div style="color: #999999; font-size: 16px; margin-top:5px;">Номер карты: 
+                                    <a style="margin-left: 20px; color:#fff;">
+                                        89115582766656
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+                            <label style="gap: 20px; color:#fff;">
+                                На счет
+                            </label>
+                            <input type="radio" id="account" name="paymentMethod" value="account" onclick="toggleFields()" >
+
+                            <div id="accountFields" class="hidden">
+                                <div style="color: #999999; font-size: 16px; margin-top:5px;">Наименование банка: 
+                                    <a style="margin-left: 20px; color:#fff;">
+                                        ВТБ
+                                    </a>
+                                </div>
+                                <div style="color: #999999; font-size: 16px; margin-top:5px;">Расчетный счет: 
+                                    <a style="margin-left: 20px; color:#fff;">
+                                        89115582766656
+                                    </a>
+                                </div>
+                                <div style="color: #999999; font-size: 16px; margin-top:5px;">БИК: 
+                                    <a style="margin-left: 20px; color:#fff;">
+                                        123456789
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="rightcolun">
-                    <img class="studiophoto" src="images/35.jpg">
-
-
-                    <div class="studiobankdata">
-                        <div style="color: #999999; font-size: 16px;">Название банка:</div>
-                        <div class="infotxt">ООО ИМИДЖБАНК</div>
-                        <div style="color: #999999; font-size: 16px; margin-top:5px;">БИК: 
-                            <a style="margin-left: 20px; color:#fff;">
-                                123456789
-                            </a>
+                <!-- тут юр лицо -->
+                    <div id="legalEntityFields" style="display: none;">
+                        <div class="studiodataip">
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Полное наименование:<br> 
+                                <a style="margin-left: 0px; color:#fff;">
+                                    ОАО ИнфоОблСервис
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Краткое наименование:<br> 
+                                <a style="margin-left: 0px; color:#fff;">
+                                    ИнфоОблСервис
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Наименование на английском:<br> 
+                                <a style="margin-left: 0px; color:#fff;">
+                                    ИнфоОблСервис
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">ИНН:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    123456789
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">КПП:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    123456789
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">ОГРН:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    123456789
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Тип Адреса:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    Фактический
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Город:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    Архангельск
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Адресс:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    что-то там на адрессном
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Email:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    example@ya.ru
+                                </a>
+                            </div>
                         </div>
-                        <div style="color: #999999; font-size: 16px;  margin-top:5px;">Расчетный счет:</div>
-                        <div class="infotxt">12345678912345678912</div>
+                        <div class="studiodataip">
+                            <div class="infotxt">
+                                Сведения о руководителе
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Имя:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    Бугагагаг
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Фамилия:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    Бугагагаг
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Отчество:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    Бугагагаг
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Дата рождения:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    01.01.2000
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Номер телефона:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    89115582766
+                                </a>
+                            </div>
+                            <div style="color: #999999; font-size: 16px; margin-top:5px;">Гражданство:
+                                <a style="margin-left: 0px; color:#fff;">
+                                    Россия
+                                </a>
+                            </div>
+                        </div>
+                        <div class="studiodataip">
+                            <div class="infotxt">
+                                Сведения об учредителе
+                            </div>
+                            <div style="color: #999999; font-size: 16px; display: block;">
+                                <label style="gap: 20px; color:#fff;">
+                                    Совпадают с данными о руководителе
+                                </label>
+                                <input type="radio" name="statusruk" value="Самозанятый" onclick="toggleFieldsRuk()" >
+                                <div id="infoBlock" style="display: block;">
+                                    <div style="color: #999999; font-size: 16px; margin-top:5px;">Имя:
+                                        <a style="margin-left: 0px; color:#fff;">
+                                            Бугагагаг
+                                        </a>
+                                    </div>
+                                    <div style="color: #999999; font-size: 16px; margin-top:5px;">Фамилия:
+                                        <a style="margin-left: 0px; color:#fff;">
+                                            Бугагагаг
+                                        </a>
+                                    </div>
+                                    <div style="color: #999999; font-size: 16px; margin-top:5px;">Отчество:
+                                        <a style="margin-left: 0px; color:#fff;">
+                                            Бугагагаг
+                                        </a>
+                                    </div>
+                                    <div style="color: #999999; font-size: 16px; margin-top:5px;">Номер телефона:
+                                        <a style="margin-left: 0px; color:#fff;">
+                                            89115582766
+                                        </a>
+                                    </div>
+                                    <div style="color: #999999; font-size: 16px; margin-top:5px;">Гражданство:
+                                        <a style="margin-left: 0px; color:#fff;">
+                                            Россия
+                                        </a>
+                                    </div>
+                                    <div style="color: #999999; font-size: 16px; margin-top:5px;">Город проживания:
+                                        <a style="margin-left: 0px; color:#fff;">
+                                            Архангельск
+                                        </a>
+                                    </div>
+                                    <div style="color: #999999; font-size: 16px; margin-top:5px;">Адресс:
+                                        <a style="margin-left: 0px; color:#fff;">
+                                            что-то там на адрессном
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
+
+                    <!-- кнопки снизу -->
                     <button class="lessonsbtn">Занятия от студии</button>
+                    <button class="apply" onclick="showWarningPanel()" >Предупреждение</button>
                     <button class="deny">Заблокировать</button>
+                </div>
+                
+                <!-- фотографии партнера -->
+                <div class="rightcolun">
+                    <!-- <img class="studiophoto" src="images/35.jpg"> -->
+
+                        <div class="carousel-ctnr">
+                            <div class="left-arrow" style="cursor:pointer; opacity: 0.8;">&lt;</div>
+                            <div class="carouselimg" style="background-image: url('images/studio.jpg');"></div>
+                            <div class="carouselimg" style="background-image: url('images/headimg.jpg');"></div>
+                            <div class="carouselimg" style="background-image: url('images/studio.jpg');"></div>
+                            <div class="carouselimg" style="background-image: url('images/headimg.jpg');"></div>
+                            <div class="right-arrow" style="cursor:pointer; opacity: 0.8;">&gt;</div>
+                        </div>
+                        <div class="studioname">
+                            Превью студии
+                        </div>
+                        <div class="studiophoto" style="background-image: url('images/headimg.jpg');"></div>
+                        <div class="studioname">
+                            Аватарка студии
+                        </div>
+                        <div class="studiophoto" style="background-image: url('images/headimg.jpg'); height: 138px; width: 138px;"></div>
+                
+
+                    
+                    
                 </div>
                 </div>
                 <div class="warning_panel" id="warning_panel">
@@ -81,7 +314,6 @@
                     <input type="submit" class="sendwarning">
                 </div>
                 
-            
                
             
         </div>
@@ -134,10 +366,85 @@
     
 
         <script>
-            function showWarningPanel() {
+
+function toggleFieldsType() {
+    // Скрываем все поля
+    document.getElementById("selfEmployedFields").style.display = "none";
+    document.getElementById("legalEntityFields").style.display = "none";
+    
+    // Получаем выбранное значение
+    const selectedValue = document.querySelector('input[name="status"]:checked').value;
+    
+    // Показываем соответствующие поля
+    if (selectedValue === "Самозанятый") {
+        document.getElementById("selfEmployedFields").style.display = "block";
+    } else if (selectedValue === "ЮР лицо/ИП") {
+        document.getElementById("legalEntityFields").style.display = "block";
+    }
+}
+        function toggleFieldsRuk() {
+                const infoBlock = document.getElementById('infoBlock');
+                if (infoBlock.style.display === "none") {
+                    infoBlock.style.display = "block";
+                } else {
+                    infoBlock.style.display = "none";
+                }
+            }
+
+            function toggleFields() {
+        // Сначала скрываем все поля
+        document.getElementById('phoneFields').classList.add('hidden');
+        document.getElementById('cardFields').classList.add('hidden');
+        document.getElementById('accountFields').classList.add('hidden');
+
+        // Получаем выбранный способ получения выплат
+        var selectedMethod = document.querySelector('input[name="paymentMethod"]:checked');
+        
+        // Отображаем поля, соответствующие выбранному методу
+        if (selectedMethod) {
+            var fieldsId = selectedMethod.value + 'Fields';
+            document.getElementById(fieldsId).classList.remove('hidden');
+        }
+    }
+
+    window.onload = function() {
+        toggleFields();
+        toggleFieldsType();
+        
+    }
+
+    
+
+    function showWarningPanel() {
                 const warningPanel = document.getElementById('warning_panel');
                 warningPanel.style.display = 'block'; // Показываем панель предупреждения
             }
+
+
+            $(document).ready(function() {
+    // Инициализация карусели
+    var index = 0;
+    var imgs = $(".carouselimg");
+    
+    // Скрываем все изображения, кроме первого
+    imgs.hide(); 
+    imgs.eq(index).show(); // Показываем первое изображение
+
+    $(".left-arrow").on("click", function(){
+        imgs.eq(index).hide(); // Скрываем текущее изображение
+        index = (index === 0) ? imgs.length - 1 : index - 1; // Переход к предыдущему
+        imgs.eq(index).show(); // Показываем новое изображение
+    });
+
+    $(".right-arrow").on("click", function(){
+        imgs.eq(index).hide(); // Скрываем текущее изображение
+        index = (index === imgs.length - 1) ? 0 : index + 1; // Переход к следующему
+        imgs.eq(index).show(); // Показываем новое изображение
+    });
+});
         </script>
+
+
+
 
 </body>

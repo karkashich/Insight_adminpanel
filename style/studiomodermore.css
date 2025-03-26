@@ -1,34 +1,34 @@
 html{
-    background-color:#141414;
-    overflow-x: hidden;
+  background-color:#141414;
+  overflow-x: hidden;
 }
 body{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 @media(min-width: 1440px){
-  html{
-    scale: 1.15;
-  }
+html{
+  scale: 1.15;
+}
 }
 @media (min-width: 1920px){
-  html{
-    scale: 1.35;
-  }
+html{
+  scale: 1.35;
+}
 }
 
 .leftmenu{
-    
-    color: #ffffff;
-    font-family:Montserrat;
-    padding:  10px 20px 10px 20px;
+  
+  color: #ffffff;
+  font-family:Montserrat;
+  padding:  10px 20px 10px 20px;
 }
 .leftmenu:hover{
-    background-color: #222222;
-    border-radius: 20px;
+  background-color: #222222;
+  border-radius: 20px;
 
 }
 .userphoto
@@ -51,53 +51,53 @@ position:absolute;
 
 .dropbtn {
 
-    background-color: #ffffff00;
-    color: none;
-    margin-top:0px;
-    left:1047px;
-    height: 80px;
-    width: 100px;
-    border: none;
-  }
-  
-  .dropdown {
-    position: absolute;
-    display: inline-block;
-    top:10px;
-    left:1047px;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #222222;
-    min-width: 160px;
-    border-radius: 20px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 999;
-    width: 90px;
-    margin-left: -8px;
-  }
-  
-  .dropdown-content a {
-    color: #fff;
-    padding: 10px 20px;
-    font-family: Montserrat;
-    text-decoration: none;
-    display: block;
-    width: 120px;
-    border-radius: 20px;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #7b0000;
-    color: #ffffff;
-    font-weight: 500;
+  background-color: #ffffff00;
+  color: none;
+  margin-top:0px;
+  left:1047px;
+  height: 80px;
+  width: 100px;
+  border: none;
 }
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e4100;}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  top:10px;
+  left:1047px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222222;
+  min-width: 160px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+  width: 90px;
+  margin-left: -8px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 10px 20px;
+  font-family: Montserrat;
+  text-decoration: none;
+  display: block;
+  width: 120px;
+  border-radius: 20px;
+}
+
+.dropdown-content a:hover {
+  background-color: #7b0000;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e4100;}
 
 .main
 {
@@ -109,102 +109,112 @@ position:absolute;
 }
 
 .rectangle352{
-  background-color:#222222;
-  font-family: Montserrat;
-  width:800px;
-  border-radius:20px;
-  top:90px;
-  left:220px;
-  position:absolute;
-  display: flex;
-  padding: 20px;
+background-color:#222222;
+font-family: Montserrat;
+width:800px;
+border-radius:20px;
+top:90px;
+left:220px;
+position:absolute;
+display: flex;
+padding: 20px;
 }
 /*тут меняется весь контент на странице*/
 .coluns{
-  display: flex;
+display: flex;
 }
 
 .studioname{
-  color: #fff;
-  font-size: 29px;
-  height: 29px;
+color: #fff;
+font-size: 29px;
+height: 29px;
 }
-.studioadress{
-  margin-top: 20px;
-  background-color: #333333;
-  height: 126px;
-  width: 350px;
-  border-radius: 10px;
-  padding: 20px;
+.studiodatasam{
+margin-top: 20px;
+background-color: #333333;
+height: auto;
+width: 350px;
+border-radius: 10px;
+padding: 20px;
+}
+.studiodataip{
+margin-top: 20px;
+background-color: #333333;
+height: auto;
+width: 350px;
+border-radius: 10px;
+padding: 20px;
+
 }
 .studiodata{
-  margin-top: 20px;
-  background-color: #333333;
-  height: 156px;
-  width: 350px;
-  border-radius: 10px;
-  padding: 20px;
+margin-top: 20px;
+background-color: #333333;
+height: auto;
+width: 350px;
+border-radius: 10px;
+padding: 20px;
 }
 .infotxt{
-  color: #fff;
-  font-size: 16px;
-  margin-top: 5px;
+color: #fff;
+font-size: 16px;
+margin-top: 5px;
 }
 .rightcolun{
-  margin-left: 20px;
+margin-left: 20px;
 }
 .studiophoto{
-  height: 215px;
-  width: 390px;
-  border-radius: 10px;
-  margin: 0;
-  
+height: 270px;
+width: 390px;
+border-radius: 10px;
+margin-top: 20px;
+background-size: cover;
+
 }
 
 .studiobankdata{
-  margin-top: 16px;
-  background-color: #333333;
-  height: 156px;
-  
-  border-radius: 10px;
-  padding: 20px;
+margin-top: 16px;
+background-color: #333333;
+height: 156px;
+
+border-radius: 10px;
+padding: 20px;
 }
 
 
 /* тут кнопочки*/
 .apply{
-  margin-top: 20px;
-  background-color: #7B8F74;
-  border: none;
-  border-radius: 10px;
-  height: 50px;
-  width: 390px;
-  color: #fff;
-  font-size: 22px;
-  font-family: Montserrat;
+margin-top: 20px;
+background-color: #7B8F74;
+border: none;
+border-radius: 10px;
+height: 50px;
+width: 390px;
+color: #fff;
+font-size: 22px;
+font-family: Montserrat;
 }
 .apply:active{background-color: #cdeac3;}
 
 .deny{
-  margin-top: 20px;
-  background-color: #712121;
-  border: none;
-  border-radius: 10px;
-  height: 50px;
-  width: 390px;
-  color: #fff;
-  font-size: 22px;
-  font-family: Montserrat;
+margin-top: 20px;
+background-color: #712121;
+border: none;
+border-radius: 10px;
+height: 50px;
+width: 390px;
+color: #fff;
+font-size: 22px;
+font-family: Montserrat;
 }
 .deny:active{background-color: #b63737;}
 
 
 
 .header{
-  position: fixed;
-  z-index: 999;
-  margin-left: 39px;
-  top: 0px;
+position: fixed;
+z-index: 999;
+margin-left: 39px;
+top: 0px;
 }
 .rectangle386
 {
@@ -242,3 +252,43 @@ position:absolute;
 width:102px;
 }
 
+
+.hidden {
+display: none;
+}
+
+/* тут наша карусель */
+/* .rightcolun {
+position: relative;
+} */
+
+.carousel-ctnr {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.carouselimg {
+display: none; /* Скрываем изображения по умолчанию */
+height: 270px;
+width: 390px;
+border-radius: 10px;
+margin-top: 00px;
+background-size: cover;
+}
+
+.carouselimg.active {
+display: block; /* Показываем активное изображение */
+}
+.left-arrow{
+position: absolute;
+margin-left: -350px;
+z-index: 555;
+font-size: 50px;
+}
+.right-arrow{
+position: absolute;
+margin-left: 350px;
+font-size: 50px;
+z-index: 555;
+}
