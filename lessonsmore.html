@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="style/studiomore.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id='main' class='main'>
+        <div id='rectangle352' class='rectangle352'>
+            <div class="coluns">
+                <!-- данные партнера -->
+                <div class="leftcolun">
+
+                    <div class="studioname">
+                        <img src="images/back_btn.svg" style="margin-right: 15px;" href="#">
+                        ОАО ИнфоОблСервис
+                    </div>
+
+                    <!-- <div class="studiodata">
+                        <div style="color: #999999; font-size: 16px; display: block;">
+                            <label style="gap: 20px; color:#fff;">
+                                Самозанятый
+                            </label>
+                            <input type="radio" name="status" value="Самозанятый" onclick="toggleFieldsType()" >
+                            <label style="gap: 20px; color:#fff;">
+                                Юр лицо/ИП
+                            </label>
+                            <input type="radio" name="status" value="ЮР лицо/ИП" onclick="toggleFieldsType()" checked>
+                        </div>
+                    </div> -->
+
+                    <!-- тут по самозанятому -->
+                <div id="selfEmployedFields" >
+                    <div class="studiodatasam" style="display: block; height: 215px;">
+                        <div style="color: #999999; font-size: 16px; margin-top: 5px;">Название занятия:</div>
+                        <div class="infotxt">Балет классика</div>
+                        <div style="color: #999999; font-size: 16px; margin-top: 5px;">Дата проведения:</div>
+                        <div class="infotxt">Каждый ПН, ВТ, СР, ЧТ, ПТ, СБ, ВС.</div>
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">Время проведения: 
+                            <a style="margin-left: 20px; color:#fff;">
+                                с 9:00 до 10:00
+                            </a>
+                        </div>
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">Кол-во мест: 
+                            <a style="margin-left: 20px; color:#fff;">
+                                35 
+                            </a>
+                        </div>
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">Стоимость: 
+                            <a style="margin-left: 20px; color:#fff;">
+                                2500
+                            </a>
+                        </div>
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">Адрес(Город): 
+                            <a style="margin-left: 20px; color:#fff;">
+                                Архангельск
+                            </a>
+                        </div>
+                        <div style="color: #999999; font-size: 16px; margin-top:5px;">Адрес: 
+                            <a style="margin-left: 20px; color:#fff;">
+                                ул. Ломоносова 181 оф 5
+                            </a>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <!-- тут юр лицо -->
+                    <!-- <div id="legalEntityFields" style="display: none;">
+                        
+                        
+                        
+                    </div> -->
+
+
+                    <button class="apply" onclick="showWarningPanel()" >Предупреждение</button>
+                   
+                </div>
+                
+                <!-- фотографии занятия -->
+                <div class="rightcolun">
+                    
+                        <div class="studioname">
+                            Фотография занятия
+                        </div>
+                        <div class="studiophoto" style="background-image: url('images/headimg.jpg'); height: 255px;" ></div>
+
+
+                    <button class="deny">Заблокировать</button>
+                
+
+                    
+                    
+                </div>
+                </div>
+                <div class="warning_panel" id="warning_panel">
+
+                    <textarea class="warning_text"  value="Причина предупреждения"></textarea>
+                    <input type="submit" class="sendwarning">
+                </div>
+                
+               
+            
+        </div>
+
+
+
+
+
+
+
+
+        <div id='rectangle386' class='rectangle386'>
+            <div class="leftmenu">Студии</div>
+            <div class="leftmenu">Новые студии</div>
+            <div class="leftmenu">Пользователи</div>
+            <div class="leftmenu">Новые мероприятия</div>
+            <div class="leftmenu">Мероприятия</div>
+            <!-- <div class="leftmenu">Статьи</div> -->
+            <!-- <div class="leftmenu">Добавить сотрудника</div> -->
+
+        </div>
+
+        <div class="header">
+            <div id='frame1' class='frame1'>
+                <div id='insight' class='insight'>
+                Insight
+                </div>
+
+                <div class="profile">
+                    
+                    <img id='userphoto' class='userphoto'>
+                    
+                    <img id='arrow60' class='arrow60' src='images/Arrow60.svg'/>
+
+
+                    <div class="dropdown">
+                        <button class="dropbtn">  
+                            <img id='userphoto' class='userphoto'>
+                            <img id='arrow60' class='arrow60' src='images/Arrow60.svg'/>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Выйти из аккаунта</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    
+
+        <script>
+
+
+    
+
+    
+
+    function showWarningPanel() {
+                const warningPanel = document.getElementById('warning_panel');
+                warningPanel.style.display = 'block'; // Показываем панель предупреждения
+            }
+
+
+            
+        </script>
+
+
+
+
+</body>

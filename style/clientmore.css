@@ -102,7 +102,7 @@ position:absolute;
 .main
 {
 background-color:#141414;
-height:832px;
+height:950px;
 width:1280px;
 padding:0px;
 position:absolute;
@@ -110,47 +110,120 @@ position:absolute;
 
 .rectangle352{
   background-color:#222222;
-  
+  font-family: Montserrat;
   width:800px;
   border-radius:20px;
   top:90px;
   left:220px;
-  position:relative;
+  position:absolute;
+  
   padding: 20px;
 }
-.blocktxt{
-  color: #fff;
-  font-family: Montserrat;
-  font-size: 24px;
-}
-.studioinfo{
-  margin-top: 20px;
-  height: 100px;
-  width: 700px;
-  font-family: Montserrat;
-  color: #fff;
-  font-size: 18px;
+/*тут меняется весь контент на странице*/
+.coluns{
   display: flex;
 }
-.studioimg{
-  height: 100px;
-  width: 200px;
-  border-radius:10px;
-  background-size:cover;
-  }
-.studioname, .studioadress, .studiodateregistration{
-  margin-bottom: 15px;
-}
+
 .studioname{
   color: #fff;
   font-size: 29px;
   height: 29px;
   display: flex;
   align-items: center;
+
 }
-.studiobox2{
-margin-left: 20px;
+
+
+.clientinfo{
+  margin-top: 20px;
+  background-color: #333333;
+  height: auto;
+  width: 350px;
+  border-radius: 10px;
+  padding: 20px;
 }
+
+.infotxt{
+  color: #fff;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.rightcolun{
+  margin-left: 20px;
+}
+.clientphoto{
+  height: auto;
+  width: 390px;
+  border-radius: 10px;
+  margin: 0;
+  
+}
+
+
+
+
+/* тут кнопочки*/
+.apply{
+  margin-top: 20px;
+  background-color: #d1b202;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 390px;
+  color: #000000;
+  font-size: 22px;
+  font-family: Montserrat;
+}
+.apply:active{background-color: #ddd06c;}
+
+.warning_panel{
+  
+    display: none; 
+
+}
+.warning_text{
+    background-color: #333;
+    width: 799px    ;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: Montserrat;
+    color: #ffffff;
+    
+}
+
+.sendwarning{
+  
+  margin-top: 20px;
+  background-color: #333;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 799px;
+  color: #d1d1d1;
+  font-size: 22px;
+  font-family: Montserrat;
+}
+.sendwarning:active{background-color: #999999;}
+
+
+.deny{
+  margin-top: 20px;
+  background-color: #712121;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 390px;
+  color: #fff;
+  font-size: 22px;
+  font-family: Montserrat;
+}
+.deny:active{background-color: #b63737;}
+
+
 
 .header{
   position: fixed;
@@ -193,75 +266,4 @@ left:30px;
 position:absolute;
 width:102px;
 }
-.search{
-  border: none;
-  padding: 5px;
-  background-color: #222222;
-  color: #fff;
-  text-decoration: none;
-  font-family: Montserrat;
-  width: 760px;
-  height: 25px;
-}
 
-input:focus{
-  outline: none;
-}
-.searchbtn{
-  background-color: #222222;
-  border: none;
-  padding: 2px;
-  height: 25px;
-  width: 25px;
-}
-.searchimg{
-  height: 18px;
-  width: auto;
-}
-
-
-
-.pagination_block{
-  top: 110px;
-  display: flex;
-  position: relative;
-  margin: auto;
-  border: none;
-  border-radius: 20px;
-  padding: 20px;
-  background-color: #222222;
-  color: #fff;
-  text-decoration: none;
-  font-family: Montserrat;
-  width: 800px;
-  height: auto;
-}
-
-*{
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-}
-
-.pagination{
-  background-color: #222;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-
-.pagination a{
-  width: 100px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  color: #777777;
-  font-size: 18px;
-  font-weight: 700;
-  transition: .3s linear;
-}
-
-.pagination a:hover{
-  color: #fff;
-}

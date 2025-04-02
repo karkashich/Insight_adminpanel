@@ -110,7 +110,7 @@ position:absolute;
 
 .rectangle352{
   background-color:#222222;
-  
+  height: auto;
   width:800px;
   border-radius:20px;
   top:90px;
@@ -125,28 +125,21 @@ position:absolute;
 }
 .studioinfo{
   margin-top: 20px;
-  height: 100px;
+  height: auto;
   width: 700px;
   font-family: Montserrat;
   color: #fff;
   font-size: 18px;
   display: flex;
 }
-.studioimg{
-  height: 100px;
-  width: 200px;
+.clientimg{
+  height: 150px;
+  width: 150px;
   border-radius:10px;
   background-size:cover;
   }
 .studioname, .studioadress, .studiodateregistration{
   margin-bottom: 15px;
-}
-.studioname{
-  color: #fff;
-  font-size: 29px;
-  height: 29px;
-  display: flex;
-  align-items: center;
 }
 .studiobox2{
 margin-left: 20px;
@@ -161,7 +154,7 @@ margin-left: 20px;
 .rectangle386
 {
 
-height:347px;
+height:auto;
 width:160px;
 border-radius:20px;
 top:90px;
@@ -193,33 +186,31 @@ left:30px;
 position:absolute;
 width:102px;
 }
-.search{
-  border: none;
-  padding: 5px;
-  background-color: #222222;
-  color: #fff;
-  text-decoration: none;
-  font-family: Montserrat;
-  width: 760px;
-  height: 25px;
-}
 
+.search{
+    border: none;
+    padding: 5px;
+    background-color: #222222;
+    color: #fff;
+    text-decoration: none;
+    font-family: Montserrat;
+    width: 760px;
+    height: 25px;
+}
 input:focus{
-  outline: none;
+    outline: none;
 }
 .searchbtn{
-  background-color: #222222;
-  border: none;
-  padding: 2px;
-  height: 25px;
-  width: 25px;
+    background-color: #222222;
+    border: none;
+    padding: 2px;
+    height: 25px;
+    width: 25px;
 }
 .searchimg{
-  height: 18px;
-  width: auto;
+    height: 18px;
+    width: auto;
 }
-
-
 
 .pagination_block{
   top: 110px;
@@ -265,3 +256,39 @@ input:focus{
 .pagination a:hover{
   color: #fff;
 }
+
+
+
+
+.pagination a:nth-child(1):hover ~ .bar{
+  left: 0;
+}
+
+.pagination a:nth-child(2):hover ~ .bar{
+  left: 100px;
+}
+
+.pagination a:nth-child(3):hover ~ .bar{
+  left: 200px;
+}
+
+.pagination a:nth-child(4):hover ~ .bar{
+  left: 300px;
+}
+
+.pagination a:nth-child(5):hover ~ .bar{
+  left: 400px;
+}
+
+.pagination a:nth-child(6):hover ~ .bar{
+  left: 500px;
+}
+
+.pagination a:nth-child(7):hover ~ .bar{
+  left: 600px;
+}
+.pagination a:nth-child(8):hover ~ .bar{
+  left: 700px;
+}
+
+
